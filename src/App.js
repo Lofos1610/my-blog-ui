@@ -4,14 +4,14 @@ function App() {
   const [articles, setArticles] = useState([]);
 
   useEffect(() => {
-    fetch("https://script.google.com/macros/s/AKfycbzqMHR-meW0bv1WLljzdnn0oLfZ--wZAWfh5kpH2WvG_zPggv29Yxir9cLd195zxkIK/exec")
+    fetch("https://script.google.com/macros/s/AKfycbyq9FkmaWq8SWOBgAIUe2aFu-X5SW88t6UrmeUAVW3AWnQXiqh3vbatNOEX3B3Mrzka/exec")
       .then(res => res.json())
       .then(data => setArticles(data))
       .catch(err => console.error("取得失敗:", err));
   }, []);
 
   const handleRegister = (article) => {
-    fetch("https://script.google.com/macros/s/AKfycbzqMHR-meW0bv1WLljzdnn0oLfZ--wZAWfh5kpH2WvG_zPggv29Yxir9cLd195zxkIK/exec", {
+    fetch("https://script.google.com/macros/s/AKfycbyq9FkmaWq8SWOBgAIUe2aFu-X5SW88t6UrmeUAVW3AWnQXiqh3vbatNOEX3B3Mrzka/exec", {
       method: "POST",
       body: JSON.stringify({
         title: article.title,
